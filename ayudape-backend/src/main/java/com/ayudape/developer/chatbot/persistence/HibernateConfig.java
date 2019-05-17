@@ -28,7 +28,7 @@ public class HibernateConfig {
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
-        dataSource.setUrl("jdbc:mariadb://firstdb.cm3xiki7scnk.us-east-2.rds.amazonaws.com:3306");
+        dataSource.setUrl("jdbc:mariadb://firstdb.cm3xiki7scnk.us-east-2.rds.amazonaws.com:3306/ayudape_main");
         dataSource.setUsername("userr2232");
         dataSource.setPassword("ayudape123456");
         return dataSource;

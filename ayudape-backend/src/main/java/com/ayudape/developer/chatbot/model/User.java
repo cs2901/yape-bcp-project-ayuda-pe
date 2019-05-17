@@ -1,38 +1,34 @@
 package com.ayudape.developer.chatbot.model;
 
-import org.hibernate.annotations.GenericGenerator;
+import com.ayudape.developer.chatbot.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.UUID;
 
+@Entity
+@Table(name="users")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private final Integer id;
-
     @GeneratedValue
-    private final UUID uuid;
+    private UUID uuid;
 
-    private final String firstName;
-    private final String lastName;
-
-
-    private final String account;
+    @Column(name = "first_name",  nullable = false)
+    private String firstName;
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
 
     public User(){
 
     }
 
-    public User(String firstName, String lastName, String account) {
+    public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-
     }
 
-    public UUID getId() {
+    public UUID getUuid() {
         return uuid;
     }
 
@@ -42,5 +38,14 @@ public class User {
 
     public String getLastName() {
         return lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "uuid=" + getUuid() +
+                "firstName='" + getFirstName() +
+                "\'lastName=\'" + getLastName() +
+                "'}";
     }
 }
