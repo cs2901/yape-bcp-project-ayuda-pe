@@ -6,4 +6,4 @@
 
 ## 3. Design
 
-    # 3.1. Architecture
+### 3.1. Architecture
