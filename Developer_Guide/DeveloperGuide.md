@@ -16,11 +16,19 @@
 
 #### 3.1.4. UI Component
 
+![](uiComponent.png)
+
 #### 3.1.5. Logic Component
+
+![](logicComponent.png)
 
 #### 3.1.6. Watson Component
 
+![](watsonComponent.png)
+
 #### 3.1.7. Storage Components
+
+![](storageComponent.png)
 
 #### 3.1.8. Interaction Between Components
 
