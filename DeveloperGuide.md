@@ -12,6 +12,8 @@
 
 #### 3.1.3. Architecture Diagram
 
+![](https://raw.githubusercontent.com/cs2901/yape-bcp-project-ayuda-pe/master/DiagramaDeClases.png)
+
 #### 3.1.4. UI Component
 
 #### 3.1.5. Logic Component
@@ -22,7 +24,7 @@
 
 #### 3.1.8. Interaction Between Components
 
-## FAQ
+## 4. FAQ
 
 ## 5. Glossary
 
