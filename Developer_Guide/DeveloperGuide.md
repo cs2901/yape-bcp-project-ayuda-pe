@@ -1,6 +1,7 @@
 # DEVELOPER GUIDE
 
 ## 1. Introduction
+AyudaPe is an extension/complement to the Yape application that will act as a chatbot for answering a user when a question (related to Yape) is presented. AyudaPe will receive a question/query, parse it, retrieve the answer from a database and show it. It will use Java, Javascript and SpringBoot for back-end, the React JavaScript library for front-end, Amazon Relational Database Service (RDS) and Amazon Elastic Compute Cloud (EC2) from Amazon Web Services and MariaDB for the implementation of the database, and finally use Hibernate as a mean to communicate to said database.
 
 ## 2. Features
 
