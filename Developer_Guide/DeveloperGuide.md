@@ -10,9 +10,9 @@
 
 #### 3.1.2. Class Diagram
 
-#### 3.1.3. Architecture Diagram
+![](DiagramaDeClases.png)
 
-![](https://raw.githubusercontent.com/cs2901/yape-bcp-project-ayuda-pe/master/DiagramaDeClases.png)
+#### 3.1.3. Architecture Diagram
 
 #### 3.1.4. UI Component
 
@@ -23,6 +23,10 @@
 #### 3.1.7. Storage Components
 
 #### 3.1.8. Interaction Between Components
+
+![](getHistory.png)
+
+![](askQuestion.png)
 
 ## 4. FAQ
 
