@@ -5,6 +5,24 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 
 ## 2. Features
 
+**Nicolas Chipana:** UI 
+
+**Rodrigo Bedoya:** save history feature 
+- v1.2: Save all messages in file. Load all messages from file 
+- v1.3: Save / load only recent messages. 
+- v1.4: Can choose to clear history / select after how much time history should be cleared. 
+- v2.0: Show older messages as user goes up.
+
+**Reynaldo Rojas, Juan Navarro:** process question feature 
+- v1.2 Integration with Watson Assistant API 
+- v1.3 Train model and support more questions 
+- v1.4 Add websockets support 
+
+**Joe Acuña, Bryan Diaz:** show functionalities feature 
+- v1.2: list options (app functionalities) 
+- v1.3: show tutorials with text and images explaining app functionalities 
+- v2.0: link options with their respective task
+
 ## 3. Design
 
 ### 3.1. Architecture
