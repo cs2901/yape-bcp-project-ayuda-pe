@@ -33,7 +33,7 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 
 #### 3.1.2. Class Diagram
 
-![](DiagramaDeClases.png)
+![](classdiagram.png)
 
 #### 3.1.3. Architecture Diagram
 
