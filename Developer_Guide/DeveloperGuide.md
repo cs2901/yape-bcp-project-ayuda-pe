@@ -59,6 +59,10 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 
 ![](askQuestion.png)
 
+### 3.2 Use Case Diagram
+
+![](UseCaseDiagram.png)
+
 ## 4. FAQ
 
 ## 5. Glossary

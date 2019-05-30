@@ -82,3 +82,7 @@
 
 **Use case ends**
 
+## Use Case Diagram
+
+![](UseCaseDiagram.png)
+
