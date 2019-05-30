@@ -27,6 +27,9 @@ Non-functional:
 ## Features
 
 **Nicolas Chipana:** UI 
+- v1.2: Implement message box UI: Using CSS it is possible to change the dimensions of the message box depending on the size of the message.
+- v1.3: Scrolling message: Using React it is possible to change the current layout of an HTML to react to a certain action. In this case, sending or receiving a message from AyudaPe will scroll the screen proportionally to the size of the message.
+- v1.4: Touchable questions: Using React it is possible to call a back-end function after touching an item. In this case, after touching an option in the chat the described action will call a function that retrieves information from the database to show.
 
 **Rodrigo Bedoya:** save history feature 
 - v1.2: Save all messages in file. Load all messages from file 
