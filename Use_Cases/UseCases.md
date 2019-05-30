@@ -1,6 +1,6 @@
 # USE CASES
 
-## UC01 - Chat Record
+## UC01 - Chat History
 
 **System:** YAPE
 
