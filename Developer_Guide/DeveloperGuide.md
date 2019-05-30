@@ -51,9 +51,9 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 
 #### 3.1.8. Interaction Between Components
 
-![](getHistory.png)
+![](secuencia1.png)
 
-![](askQuestion.png)
+![](secuencia2.png)
 
 ## 4. FAQ
 
