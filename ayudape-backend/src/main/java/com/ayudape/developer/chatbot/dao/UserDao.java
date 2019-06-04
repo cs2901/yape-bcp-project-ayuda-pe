@@ -18,9 +18,7 @@ public class UserDao implements Dao<User> {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public UserDao() {
-
-    }
+    public UserDao() {}
 
     @Override
     public Optional<User> get(long id) {
