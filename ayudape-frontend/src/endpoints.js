@@ -5,9 +5,7 @@ axios.interceptors.response.use(
   async error => console.log("error:", error)
 );
 
-export const getEvent = (event) => {
-  console.log("entra a get event");
+export const getEvent = (event) =>
   axios.get(
-  `https://api.idbi.pe/api/v2/events/${event}`
-  )
-}
+  `http://localhost:8080/`
+  );

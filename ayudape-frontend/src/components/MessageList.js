@@ -29,13 +29,9 @@ class MessageList extends React.Component {
   }
 
   handleGetEvent = async (event) => {
-    try {
-      const { data } = await getEvent(event);
-      resolve(data);
-    } catch(error) {
-      console.log("error", error)
-    }
-  }
+    let r = await getEvent(event);
+    console.log(r);
+  };
 
     render() {
       return (
