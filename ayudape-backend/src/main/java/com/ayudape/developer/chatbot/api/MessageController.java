@@ -1,5 +1,6 @@
 package com.ayudape.developer.chatbot.api;
 
+import com.ayudape.developer.chatbot.model.User;
 import com.ayudape.developer.chatbot.model.Message;
 import com.ayudape.developer.chatbot.service.MessageService;
 import com.ibm.cloud.sdk.core.service.security.IamOptions;
@@ -8,7 +9,10 @@ import com.ibm.watson.assistant.v2.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.UUID;
 
 @RestController
 public class MessageController {
@@ -57,4 +61,12 @@ public class MessageController {
                 .build();
         return this.assistantService.message(messageOptions).execute().getResult();
     }
+
+    @RequestMapping("/saveM")
+    public boolean save() {
+        UUID a = UUID.randomUUID();
+        Message message = new Message(a,"hola",Boolean.FALSE,"");
+        return messageService.save(message);
+    }
+
 }
