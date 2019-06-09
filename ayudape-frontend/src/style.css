@@ -20,8 +20,11 @@ html, body {
 }
 
 .app {
+    margin: 0 auto;
+    transform-origin: 0 0;
     display: grid;
     height: 100%;
+    width: 650px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 0.1fr 1fr 0.1fr 1px;
     grid-template-areas:
@@ -47,7 +50,10 @@ html, body {
 }
 
 .message {
-    margin: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 20px 10px;
 }
 
 .message .message-time {
@@ -55,23 +61,23 @@ html, body {
     color: var(--secondary-text-color);
     opacity: 0.9;
     margin-bottom: 6px;
+    grid-area: t;
 }
 .message .message-text {
     background: var(--main-color);
     color: var(--main-text-color);
-    display: inline;
-    padding: 7px 8px;
+    display: flex;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    padding: 10px 8px;
     margin-left: 10px;
     border-radius: 8px;
-    grid-area: t;
 }
 
 .message-list {
-    box-sizing: border-box;
     padding-left: 6px;
-    width: 100%;
+    width: 650px;
     height: 100%;
-    overflow: scroll;
     background: white;
 }
 

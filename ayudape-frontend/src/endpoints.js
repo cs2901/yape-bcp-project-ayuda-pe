@@ -7,5 +7,8 @@ axios.interceptors.response.use(
 
 export const getEvent = (event) =>
   axios.get(
-  `http://localhost:8080/`
-  );
+  `https://api.idbi.pe/api/v2/events/${event}`
+  )
+
+export const sendMessage = (message) =>
+  console.log("axios ",message)
