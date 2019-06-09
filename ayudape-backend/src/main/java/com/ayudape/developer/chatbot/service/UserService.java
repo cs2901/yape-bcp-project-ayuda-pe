@@ -5,6 +5,8 @@ import com.ayudape.developer.chatbot.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -18,5 +20,7 @@ public class UserService {
     public boolean save(User user) {
         return userDao.save(user);
     }
+
+    public User getFromPhone(String phone) {return userDao.getFromPhone(phone);}
 
 }

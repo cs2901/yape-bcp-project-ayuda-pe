@@ -25,9 +25,28 @@ public class UserController {
 
     @RequestMapping("/save")
     public boolean save() {
-        User user = new User("Reynaldo", "Rojas");
+        User user = new User("Reynaldo", "Rojas","999999999");
         return userService.save(user);
     }
+
+    @RequestMapping("/phoneTest")
+    public User phoneTest() {
+        User user = userService.getFromPhone("999999999");
+        System.out.println("User :");
+        System.out.println(user.getPhone());
+        System.out.println(user.getFirstName());
+        return user;
+    }
+
+
+    @PostMapping(
+            value = "/phone",
+            consumes = "application/json",
+            produces = "application/json")
+    User find(@RequestBody User user) {
+        return userService.getFromPhone(user.getPhone());
+    }
+
 
     @PostMapping(
             value = "/users",

@@ -19,13 +19,17 @@ public class User {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
+    @Column(name = "phone", nullable = false)
+    private String phone;
+
     public User(){
 
     }
 
-    public User(String firstName, String lastName) {
+    public User(String firstName, String lastName, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.phone = phone;
     }
 
     public UUID getUuid() {
@@ -39,6 +43,8 @@ public class User {
     public String getLastName() {
         return lastName;
     }
+
+    public String getPhone() {return phone;}
 
     @Override
     public String toString() {

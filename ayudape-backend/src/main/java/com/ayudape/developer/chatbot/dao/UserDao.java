@@ -7,6 +7,9 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -29,6 +32,22 @@ public class UserDao implements Dao<User> {
     public List<User> getAll() {
         return null;
     }
+
+    public User getFromPhone(String phone){
+        try(Session session = sessionFactory.openSession())
+        {
+            CriteriaBuilder builder = session.getCriteriaBuilder();
+            CriteriaQuery<User> userQuery= builder.createQuery(User.class);
+            Root<User> user = userQuery.from(User.class);
+            userQuery.select(user).where(builder.equal(user.get("phone"), phone));
+            List<User> userResult = session.createQuery(userQuery).getResultList();
+            session.close();
+            return userResult.get(0);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
 
     @Override
     public boolean save(User user) {
