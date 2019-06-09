@@ -31,37 +31,36 @@ class App extends React.Component {
     state = {
       userInput: "",
       messages: TEST_DATA
-    }
+    };
     handleSendMessage = async() => {
       const newMessage = {text:this.state.userInput,sender:true,date:'9:00'};
-      let messages = this.state.messages;
-      messages.push(newMessage);
-      this.setState(s => {
+      let _messages = this.state.messages;
+      _messages.push(newMessage);
+        try{
+            let r = await sendMessage(newMessage);
+            console.log("try");
+        }
+        catch(e){
+            console.log(e);
+        }
+      await this.setState(s => {
         return({
           ...s,
           userInput: "",
-          messages: messages
-        })},()=>{
-          console.log("state ",this.state)
-        })
-      try{
-        let r = await sendMessage(this.state.userInput);
-        //console.log(r);
-      }
-      catch(e){
-        console.log(e);
-      }
-    }
+          messages: _messages
+        });
+      }, () => {console.log("state", this.state);});
+    };
 
     handleUserInputChange = (input) => {
-      console.log("input: ",input)
+        if(this.state.userInput === "" && input.trim().length === 0) return;
       this.setState(s => {
         return({
-          ...s
-          userInput: input.target.value
+          ...s,
+          userInput: input
         })
       })
-    }
+    };
 
     render() {
         return (
