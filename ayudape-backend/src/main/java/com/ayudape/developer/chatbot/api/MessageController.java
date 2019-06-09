@@ -7,10 +7,14 @@ import com.ibm.cloud.sdk.core.service.security.IamOptions;
 import com.ibm.watson.assistant.v2.Assistant;
 import com.ibm.watson.assistant.v2.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.ServletException;
+import java.util.List;
+
 
 import java.util.UUID;
 
@@ -66,7 +70,21 @@ public class MessageController {
     public boolean save() {
         UUID a = UUID.randomUUID();
         Message message = new Message(a,"hola",Boolean.FALSE,"");
+        List<Message> test = messageService.getFromUser(a);
+        //List<Message> test = messageService.getAll();
+        System.out.println(test.size());
+        for(int i = 0; i < test.size();i++)
+        {
+            System.out.println(test.get(i).getText());
+        }
         return messageService.save(message);
     }
-
+/*
+    @ResponseBody
+    @RequestMapping("/top/pages/")
+    public List<Message> getAllPosts(@PageableDefault(value=10, page=0) Pageable pageable) throws ServletException {
+        Page page = messageService.findAll(pageable);
+        return page.getContent();
+    }
+*/
 }
