@@ -11,22 +11,23 @@ const Input = styled.input`
     border-color: inherit;
     background: var(--send-message-form);
     font-weight: 500;
+    padding-left: 10px;
 `;
 
 const Wrapper = styled.div`
   display: flex;
-  padding: 40px;
+  padding: 20px;
 `;
 
 const Button = styled.button`
-  height: 50%
+  height: 100%
 `;
 
 const Sendform = (props) => {
       return (
         <Wrapper>
         <Input placeholder = "¿Qué quieres saber?" type = "text" onChange={(e)=>{props.onUserInputChange(e.target.value)}} value={props.userInput}/>
-            <Button type="button" onClick={props.send}>
+          <Button type="button" onClick={props.send}>
           <img src={sendImage} alt="Send Message" height="40" width="40"/>
           </Button>
         </Wrapper>
