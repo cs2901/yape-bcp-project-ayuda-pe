@@ -5,10 +5,11 @@ axios.interceptors.response.use(
   async error => console.log("error:", error)
 );
 
-export const getEvent = (event) =>
-  axios.get(
-  `https://api.idbi.pe/api/v2/events/${event}`
-  )
+const baseUrl = axios.create({ baseURL: `${"https://cors-anywhere.herokuapp.com/"}http://ec2-13-58-30-211.us-east-2.compute.amazonaws.com:8080` });
 
 export const sendMessage = (message) =>
-  console.log("axios ",message)
+    baseUrl.post(
+        "/ask-question",
+        { text: message },
+        { headers: { "Content-Type": "application/json" } }
+    );

@@ -4,22 +4,23 @@ import '../style.css'
 import { getEvent } from '../endpoints'
 import Message from './Message'
 import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 
-class MessageList extends React.Component {
-    state = {
-      messages: this.props.messages
-    };
-    render() {
-      const messages = this.state.messages;
-      return (
-        <div className="message-list">
-            { messages.map((message, index) => {
-                return (
-                  <Message key={index} text={message.text} sender={message.sender}/>
-                )
-            })}
-        </div>
-      )
-    }
-}
+const MessageList = (props) => {
+    let messages = props.messages;
+  return (
+    <div className="message-list">
+        { messages.map((message, index) => {
+            return (
+              <Message key={index} text={message.text} sender={message.sender} source={message.source}/>
+            )
+        })}
+    </div>
+  )
+};
+
+MessageList.propTypes = {
+    messages: PropTypes.array.isRequired
+};
+
 export default MessageList;

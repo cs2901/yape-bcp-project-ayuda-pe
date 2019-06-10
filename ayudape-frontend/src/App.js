@@ -30,26 +30,37 @@ const TEST_DATA = [
 class App extends React.Component {
     state = {
       userInput: "",
-      messages: TEST_DATA
+      messages: []
     };
     handleSendMessage = async() => {
+        if(this.state.userInput.trim().length === 0) return;
       const newMessage = {text:this.state.userInput,sender:true,date:'9:00'};
       let _messages = this.state.messages;
       _messages.push(newMessage);
+      let chatbotMessages;
         try{
-            let r = await sendMessage(newMessage);
-            console.log("try");
-        }
-        catch(e){
+            let r = await sendMessage(newMessage.text);
+            const data = r.data.output.generic;
+            chatbotMessages = data.map(message =>
+                new Object({
+                    date: '8:30',
+                    sender: false,
+                    text: message.text,
+                    source: message.source
+                })
+            );
+        } catch(e){
             console.log(e);
+        } finally {
+            this.setState(s => {
+                let _messages_ = _messages.concat(chatbotMessages);
+                return({
+                    ...s,
+                    userInput: "",
+                    messages: _messages_
+                });
+            });
         }
-      await this.setState(s => {
-        return({
-          ...s,
-          userInput: "",
-          messages: _messages
-        });
-      }, () => {console.log("state", this.state);});
     };
 
     handleUserInputChange = (input) => {

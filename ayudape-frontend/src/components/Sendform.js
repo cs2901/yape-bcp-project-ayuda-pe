@@ -23,7 +23,6 @@ const Button = styled.button`
 `;
 
 const Sendform = (props) => {
-    console.log("form: ",props);
       return (
         <Wrapper>
         <Input placeholder = "¿Qué quieres saber?" type = "text" onChange={(e)=>{props.onUserInputChange(e.target.value)}} value={props.userInput}/>
@@ -39,4 +38,5 @@ Sendform.propTypes = {
   send:PropTypes.func.isRequired,
   onUserInputChange:PropTypes.func.isRequired
 };
-export default Sendform
+
+export default Sendform;

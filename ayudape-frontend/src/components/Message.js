@@ -38,20 +38,22 @@ const MessageContainer = styled.div`
 `;
 
 
-class Message extends Component {
-  state={}
-  render(){
-    return(<Wrapper sender={this.props.sender}>
-            <MessageContainer sender={this.props.sender}>
+const Message = (props) => {
+    return(
+        <Wrapper sender={props.sender}>
+            <MessageContainer sender={props.sender}>
             <img src={profile} alt="Profile Pic" height="40" width="40"/>
-            <Content>{this.props.text}</Content>
+            <Content>{props.text ? props.text : <img src={props.source} alt={"Screenshot"}/>}</Content>
             </MessageContainer>
-          </Wrapper>);
-        }
+        </Wrapper>
+    );
 }
 
+
 Message.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string.isRequired,
+    sender: PropTypes.bool.isRequired,
+    source: PropTypes.string.isRequired
 };
 
 export default Message;
