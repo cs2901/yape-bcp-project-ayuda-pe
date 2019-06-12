@@ -2,51 +2,25 @@ import React from 'react'
 import profile from '../images/Bot.png'
 import '../style.css'
 import { getEvent } from '../endpoints'
+import Message from './Message'
+import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 
-const TEST_DATA = [
-    {
-        date: '8:30',
-        text: 'Hola soy AyudaPe! Tu asistente personal de Yape.'
-    },
-    {
-        date: '8:31',
-        text: 'Habla causa'
-    },
-    {
-        date: '8:32',
-        text: '¿Qué necesitas saber?'
-    },
-    {
-        date: '8:32',
-        text: 'que haces?'
-    }
-]
+const MessageList = (props) => {
+    let messages = props.messages;
+  return (
+    <div className="message-list">
+        { messages.map((message, index) => {
+            return (
+              <Message key={index} text={message.text} sender={message.sender} source={message.source}/>
+            )
+        })}
+    </div>
+  )
+};
 
-class MessageList extends React.Component {
+MessageList.propTypes = {
+    messages: PropTypes.array.isRequired
+};
 
-  componentDidMount() {
-    this.handleGetEvent(55);
-  }
-
-  handleGetEvent = async (event) => {
-    let r = await getEvent(event);
-    console.log(r);
-  };
-
-    render() {
-      return (
-        <div className="message-list">
-            {TEST_DATA.map((message, index) => {
-                return (
-                    <div className="message">
-                    <div className="message-time">{message.date}</div>
-                        <img src={profile} alt="Profile Pic" height="40" width="40"/>
-                        <div className="message-text">{message.text}</div>
-                    </div>
-                )
-            })}
-        </div>
-      )
-    }
-}
 export default MessageList;
