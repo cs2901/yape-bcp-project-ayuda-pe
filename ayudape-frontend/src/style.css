@@ -13,6 +13,7 @@ html, body {
     font-family: system-ui;
     font-weight: 200;
     color: 	#3e5869;
+    background-color: gray;
 }
 
 #root {

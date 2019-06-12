@@ -17,6 +17,7 @@ const Input = styled.input`
 const Wrapper = styled.div`
   display: flex;
   padding: 20px;
+  background-color: white;
 `;
 
 const Button = styled.button`
