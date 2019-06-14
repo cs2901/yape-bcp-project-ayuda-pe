@@ -22,5 +22,5 @@ public class MessageService {
 
     public List<Message> getAll() { return messageDao.getAll(); }
 
-    public List<Message> getFromUser(UUID user_uuid) {return messageDao.getFromUser(user_uuid);}
+    public List<Message> getFromUser(UUID userUuid) {return messageDao.getFromUser(userUuid);}
 }
