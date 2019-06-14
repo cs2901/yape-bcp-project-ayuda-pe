@@ -10,7 +10,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: system-ui;
+    font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
     font-weight: 200;
     color: 	#3e5869;
     background-color: gray;
@@ -36,18 +36,7 @@ html, body {
 
 .header {
     grid-area: h;
-}
-
-.message-list {
-    grid-area: m;
-}
-
-.send-message-form {
-    grid-area: f;
-}
-
-.header{
-  background: var(--secondary-color);
+    background: var(--secondary-color);
 }
 
 .message {
@@ -76,6 +65,7 @@ html, body {
 }
 
 .message-list {
+    grid-area: m;
     padding-left: 6px;
     width: 650px;
     height: 100%;
@@ -83,6 +73,7 @@ html, body {
 }
 
 .send-message-form {
+    grid-area: f;
     background: var(--send-message-form);
     display: flex;
 }

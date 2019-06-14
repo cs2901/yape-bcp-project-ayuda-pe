@@ -1,9 +1,6 @@
 import React from 'react'
-import profile from '../images/Bot.png'
 import '../style.css'
-import { getEvent } from '../endpoints'
 import Message from './Message'
-import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const MessageList = (props) => {
