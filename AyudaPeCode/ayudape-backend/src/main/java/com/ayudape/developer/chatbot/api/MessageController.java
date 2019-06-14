@@ -30,9 +30,6 @@ public class MessageController {
         this.assistantService = new Assistant("2019-06-04");
         this.assistantService.setIamCredentials(options);
         this.assistantService.setEndPoint("https://gateway.watsonplatform.net/assistant/api");
-//        MessageInput input = new MessageInput.Builder()
-//                .text("Hi")
-//                .build();
 //        CreateSessionOptions createSessionOptions = new CreateSessionOptions.Builder("d03aae8d-1f0c-4867-841a-7dd29f5d7ae9").build();
 //        SessionResponse session = assistantService.createSession(createSessionOptions).execute().getResult();
 //        String sessionId = session.getSessionId();
