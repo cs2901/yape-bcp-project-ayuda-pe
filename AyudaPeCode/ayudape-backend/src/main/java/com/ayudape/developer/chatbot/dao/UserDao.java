@@ -20,7 +20,9 @@ public class UserDao implements Dao<User> {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public UserDao() {}
+    public UserDao() {
+        //default constructor
+    }
 
     @Override
     public Optional<User> get(long id) {
