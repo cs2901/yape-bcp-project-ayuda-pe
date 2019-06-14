@@ -1,6 +1,5 @@
 package com.ayudape.developer.chatbot.model;
 
-import com.ayudape.developer.chatbot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
