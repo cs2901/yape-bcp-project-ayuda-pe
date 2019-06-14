@@ -33,11 +33,11 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 
 #### 3.1.1 Component Diagram
 
-![](ComponentDiagram.png)
+![](diagram_components.png)
 
 #### 3.1.2. Class Diagram
 
-![](ClassDiagram.png)
+![](diagram_class.png)
 
 #### 3.1.3. Architecture Diagram
 
@@ -59,13 +59,14 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 
 #### 3.1.8. Interaction Between Components
 
-![](sec1.png)
+![](ask_question.png)
 
-![](sec2.png)
+![](get_history.png)
 
 ### 3.2 Use Case Diagram
 
-![](UseCaseDiagram.png)
+![](use_case.png)
+
 
 ## 4. FAQ
 
