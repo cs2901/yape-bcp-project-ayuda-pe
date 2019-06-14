@@ -78,4 +78,4 @@ Does Ayudape has any cost commission?
 
 The user stories can be found [here](https://github.com/cs2901/yape-bcp-project-ayuda-pe/issues)
 
-The use cases can be found [here](https://github.com/cs2901/yape-bcp-project-ayuda-pe/blob/master/Use_Cases/UseCases.md)
+The use cases can be found [here](https://github.com/cs2901/yape-bcp-project-ayuda-pe/blob/master/Documentation/Use_Cases/UseCases.md)
