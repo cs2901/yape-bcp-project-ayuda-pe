@@ -30,9 +30,6 @@ public class MessageController {
         this.assistantService = new Assistant("2019-06-04");
         this.assistantService.setIamCredentials(options);
         this.assistantService.setEndPoint("https://gateway.watsonplatform.net/assistant/api");
-//        MessageResponse messageResponse = this.assistantService.message(messageOptions).execute().getResult();
-//
-//        System.out.println(messageResponse);
     }
 
     @PostMapping(
