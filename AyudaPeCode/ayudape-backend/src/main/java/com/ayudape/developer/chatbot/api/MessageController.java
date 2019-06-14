@@ -63,12 +63,4 @@ public class MessageController {
         }
         return messageService.save(message);
     }
-/*
-    @ResponseBody
-    @RequestMapping("/top/pages/")
-    public List<Message> getAllPosts(@PageableDefault(value=10, page=0) Pageable pageable) throws ServletException {
-        Page page = messageService.findAll(pageable);
-        return page.getContent();
-    }
-*/
 }
