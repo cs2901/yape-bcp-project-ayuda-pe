@@ -1,6 +1,4 @@
 # AyudaPe
-[Project Specification](Projectv1-1.pdf)
-
 # Participants
 - Joe Acuña
 - Nicolás Chipana
@@ -16,4 +14,4 @@ To run the project is necessary to execute the **run.sh** script in root.
 
 # SonarQube Quality Check
 ## Front End (JavaScript)
-[front_end_quality_code](./AyudaPeCode/FrontEndQualityCode.png)
+![front_end_quality_code](./AyudaPeCode/FrontEndQualityCode.png)
