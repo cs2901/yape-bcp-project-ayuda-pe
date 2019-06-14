@@ -21,7 +21,9 @@ public class MessageDao implements Dao<Message> {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public MessageDao() {}
+    public MessageDao() {
+        //default constructor
+    }
 
     @Override
     public Optional<Message> get(long id) {
