@@ -12,7 +12,7 @@ public class Message {
     private UUID uuid;
 
     @Column(name = "user_uuid", nullable=false)
-    private UUID user_uuid;
+    private UUID userUuid;
     @Column(name = "sender", nullable=false)
     private Boolean sender;
     @Column(name = "text", nullable=false)
@@ -23,7 +23,7 @@ public class Message {
     public Message(){}
 
     public Message(UUID user_uuid,String text, Boolean sender, String image) {
-        this.user_uuid = user_uuid;
+        this.userUuid = user_uuid;
         this.text = text;
         this.sender = sender;
         this.image = image;
@@ -34,7 +34,7 @@ public class Message {
     }
 
     public UUID getUserUuid() {
-        return user_uuid;
+        return userUuid;
     }
 
     public String getText() {
