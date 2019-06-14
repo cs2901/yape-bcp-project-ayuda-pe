@@ -56,7 +56,6 @@ public class MessageController {
         UUID a = UUID.randomUUID();
         Message message = new Message(a,"hola",Boolean.FALSE,"");
         List<Message> test = messageService.getFromUser(a);
-        //List<Message> test = messageService.getAll();
         System.out.println(test.size());
         for(int i = 0; i < test.size();i++)
         {
