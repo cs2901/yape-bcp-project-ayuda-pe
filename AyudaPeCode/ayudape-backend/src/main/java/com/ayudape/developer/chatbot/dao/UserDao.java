@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,7 +32,7 @@ public class UserDao implements Dao<User> {
 
     @Override
     public List<User> getAll() {
-        return null;
+        return Collections.emptyList();
     }
 
     public User getFromPhone(String phone){
