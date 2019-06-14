@@ -36,28 +36,11 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 ![](diagram_components.png)
 
 #### 3.1.2. Class Diagram
+This class diagram corresponds to the back-end and it is only used to storage the history.
 
 ![](diagram_class.png)
 
-#### 3.1.3. Architecture Diagram
-
-#### 3.1.4. UI Component
-
-![](uiComponent.png)
-
-#### 3.1.5. Logic Component
-
-![](logicComponent.png)
-
-#### 3.1.6. Watson Component
-
-![](watsonComponent.png)
-
-#### 3.1.7. Storage Components
-
-![](storageComponent.png)
-
-#### 3.1.8. Interaction Between Components
+#### 3.1.3. Interaction Between Components
 
 ![](ask_question.png)
 
