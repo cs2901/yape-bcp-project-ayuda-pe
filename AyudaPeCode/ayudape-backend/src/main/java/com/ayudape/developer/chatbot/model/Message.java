@@ -22,8 +22,8 @@ public class Message {
 
     public Message(){}
 
-    public Message(UUID user_uuid,String text, Boolean sender, String image) {
-        this.userUuid = user_uuid;
+    public Message(UUID userUuid,String text, Boolean sender, String image) {
+        this.userUuid = userUuid;
         this.text = text;
         this.sender = sender;
         this.image = image;
