@@ -71,10 +71,7 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 ## 4. FAQ
 
 What if there is no internet connection, can I ask my doubts to AyudaPe?
-- No, AyudaPe works with the User's internet connection, because Ayudape is connected to Watson's API.
-
-How much memory space AyudaPe occupy?
-- It does not ocuppy too much because most of the impllementation uses internet to run, only the history of the User is stored in the phone.
+- No, AyudaPe works with the User's internet connection to interact with Watson's API and answer messages.
 
 ## 5. Glossary
 
