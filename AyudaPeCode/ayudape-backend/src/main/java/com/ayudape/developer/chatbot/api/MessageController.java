@@ -1,6 +1,5 @@
 package com.ayudape.developer.chatbot.api;
 
-import com.ayudape.developer.chatbot.model.User;
 import com.ayudape.developer.chatbot.model.Message;
 import com.ayudape.developer.chatbot.service.MessageService;
 import com.ibm.cloud.sdk.core.service.security.IamOptions;
