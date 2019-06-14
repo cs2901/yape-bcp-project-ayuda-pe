@@ -1,7 +1,5 @@
 package com.ayudape.developer.chatbot;
 
-import com.ayudape.developer.chatbot.model.User;
-import com.ayudape.developer.chatbot.model.Message;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -3,10 +3,7 @@ package com.ayudape.developer.chatbot.api;
 import com.ayudape.developer.chatbot.model.User;
 import com.ayudape.developer.chatbot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -18,18 +15,18 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String hello() {
         return "Hello, World!";
     }
 
-    @RequestMapping("/save")
+    @RequestMapping(value = "/save",method = RequestMethod.GET)
     public boolean save() {
         User user = new User("Reynaldo", "Rojas","999999999");
         return userService.save(user);
     }
 
-    @RequestMapping("/phoneTest")
+    @RequestMapping(value = "/phoneTest",method = RequestMethod.GET)
     public User phoneTest() {
         User user = userService.getFromPhone("999999999");
         System.out.println("User :");
@@ -43,7 +40,7 @@ public class UserController {
             value = "/phone",
             consumes = "application/json",
             produces = "application/json")
-    User find(@RequestBody User user) {
+    public User find(@RequestBody User user) {
         return userService.getFromPhone(user.getPhone());
     }
 
@@ -52,7 +49,7 @@ public class UserController {
             value = "/users",
             consumes = "application/json",
             produces = "application/json")
-    User create(@RequestBody User user) {
+    public User create(@RequestBody User user) {
         this.userService.save(user);
         return user;
     }

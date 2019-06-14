@@ -6,12 +6,8 @@ import com.ibm.cloud.sdk.core.service.security.IamOptions;
 import com.ibm.watson.assistant.v2.Assistant;
 import com.ibm.watson.assistant.v2.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.ServletException;
 import java.util.List;
 
 
@@ -36,7 +32,7 @@ public class MessageController {
             value="/ask-question",
             consumes="application/json",
             produces="application/json")
-    MessageResponse askQuestion(@RequestBody Message message) {
+    public MessageResponse askQuestion(@RequestBody Message message) {
         MessageInput input = new MessageInput.Builder()
                 .text(message.getText())
                 .build();
@@ -51,7 +47,7 @@ public class MessageController {
         return this.assistantService.message(messageOptions).execute().getResult();
     }
 
-    @RequestMapping("/saveM")
+    @RequestMapping(value = "/saveM", method = RequestMethod.GET)
     public boolean save() {
         UUID a = UUID.randomUUID();
         Message message = new Message(a,"hola",Boolean.FALSE,"");
