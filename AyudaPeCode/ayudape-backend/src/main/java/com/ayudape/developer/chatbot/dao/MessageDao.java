@@ -44,13 +44,13 @@ public class MessageDao implements Dao<Message> {
         }
     }
 
-    public List<Message> getFromUser(UUID user_uuid){
+    public List<Message> getFromUser(UUID userUuid){
         try(Session session = sessionFactory.openSession())
         {
             CriteriaBuilder builder = session.getCriteriaBuilder();
             CriteriaQuery<Message> allMessages = builder.createQuery(Message.class);
             Root<Message> message = allMessages.from(Message.class);
-            allMessages.select(message).where(builder.equal(message.get("user_uuid"), user_uuid));
+            allMessages.select(message).where(builder.equal(message.get("user_uuid"), userUuid));
             List<Message> listMessages = session.createQuery(allMessages).getResultList();
             session.close();
             return listMessages;
