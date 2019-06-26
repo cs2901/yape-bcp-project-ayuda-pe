@@ -33,6 +33,11 @@ public class MessageController {
             consumes="application/json",
             produces="application/json")
     public MessageResponse askQuestion(@RequestBody Message message) {
+
+        UUID a = UUID.randomUUID();
+        Message messageToBeSaved = new Message(a,message.getText(),Boolean.FALSE,message.getImage());
+        messageService.save(messageToBeSaved);
+
         MessageInput input = new MessageInput.Builder()
                 .text(message.getText())
                 .build();
@@ -44,7 +49,14 @@ public class MessageController {
                 .sessionId(sessionId)
                 .input(input)
                 .build();
-        return this.assistantService.message(messageOptions).execute().getResult();
+        MessageResponse response = this.assistantService.message(messageOptions).execute().getResult();
+        List<DialogRuntimeResponseGeneric> responseMessages = response.getOutput().getGeneric();
+        for (DialogRuntimeResponseGeneric responseMessage:responseMessages)
+        {
+            Message responseToBeSaved = new Message(a,responseMessage.getText(),Boolean.TRUE,responseMessage.getSource());
+            messageService.save(responseToBeSaved);
+        }
+        return response;
     }
 
     @RequestMapping(value = "/saveM", method = RequestMethod.GET)
