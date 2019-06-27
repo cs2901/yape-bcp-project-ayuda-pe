@@ -5,7 +5,7 @@ import '../style.css'
 import styled from 'styled-components';
 
 const Input = styled.input`
-    width: 80%;
+    width: 100%;
     margin: 0 20px;
     border-style: solid;
     border-color: inherit;

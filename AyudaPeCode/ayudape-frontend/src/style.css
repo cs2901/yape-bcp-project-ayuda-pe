@@ -1,5 +1,5 @@
 :root {
-    --main-color: #00D0B6;
+    --main-color: #b046b0;
     --secondary-color: purple;
     --main-text-color: white;
     --secondary-text-color: gray;
@@ -25,7 +25,7 @@ html, body {
     transform-origin: 0 0;
     display: grid;
     height: 100%;
-    width: 650px;
+    width: auto;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 0.1fr 1fr 0.1fr 1px;
     grid-template-areas:
@@ -67,15 +67,18 @@ html, body {
 .message-list {
     grid-area: m;
     padding-left: 6px;
-    width: 650px;
+    width: auto;
     height: 100%;
     background: white;
+    overflow-y:scroll;
 }
 
 .send-message-form {
     grid-area: f;
     background: var(--send-message-form);
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .send-message-form input {
