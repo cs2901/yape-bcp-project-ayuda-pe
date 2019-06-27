@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import profile from '../images/Bot.png'
+import bot from '../images/Bot.png'
+import profile from '../images/Profile.png'
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -14,9 +15,13 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
+  display: flex;
   padding-top:10px;
   padding-left:10px;
   padding-right:10px;
+  padding-bottom:10px;
+  max-width:100%;
+  justify-content: center;
 `;
 
 const MessageContainer = styled.div`
@@ -37,13 +42,17 @@ const MessageContainer = styled.div`
     `}
 `;
 
+const Image = styled.img`
+    max-width:50%;
+`
+
 
 const Message = (props) => {
     return(
         <Wrapper sender={props.sender}>
             <MessageContainer sender={props.sender}>
-            <img src={profile} alt="Profile Pic" height="40" width="40"/>
-            <Content>{props.text ? props.text : <img src={props.source} alt={"Screenshot"}/>}</Content>
+            <img src={props.sender? profile :bot} alt="Profile Pic" height="40" width="40"/>
+            <Content>{props.text ? props.text : <Image src={props.source} alt={"Screenshot"}/>}</Content>
             </MessageContainer>
         </Wrapper>
     );
