@@ -8,8 +8,9 @@ const MessageList = (props) => {
   return (
     <div className="message-list">
         { messages.map((message, index) => {
+            console.log(message)
             return (
-              <Message key={index} text={message.text} sender={message.sender} source={message.source}/>
+              <Message key={index} text={message.text} sender={message.sender} source={message.source} handler={()=>{message.handler()}}/>
             )
         })}
     </div>
