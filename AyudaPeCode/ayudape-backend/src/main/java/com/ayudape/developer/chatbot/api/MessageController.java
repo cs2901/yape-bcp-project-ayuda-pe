@@ -54,12 +54,22 @@ public class MessageController {
                 .input(input)
                 .build();
         MessageResponse response = this.assistantService.message(messageOptions).execute().getResult();
-        String intent = response.getOutput().getIntents().get(0).getIntent();
-        if (intent.equals("Feedback"))
+        List<RuntimeIntent> intents = response.getOutput().getIntents();
+
+        if(intents.size() == 0)
         {
             Feedback nonAnsweredQuestion = new Feedback(message.getText());
             feedbackService.save(nonAnsweredQuestion);
         }
+        else
+        {
+            String intent = response.getOutput().getIntents().get(0).getIntent();
+            if(intent.equals("Feedback")) {
+                Feedback nonAnsweredQuestion = new Feedback(message.getText());
+                feedbackService.save(nonAnsweredQuestion);
+            }
+        }
+
         List<DialogRuntimeResponseGeneric> responseMessages = response.getOutput().getGeneric();
         for (DialogRuntimeResponseGeneric responseMessage:responseMessages)
         {
