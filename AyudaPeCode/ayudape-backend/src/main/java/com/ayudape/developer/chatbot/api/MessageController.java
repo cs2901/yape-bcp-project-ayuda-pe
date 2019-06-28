@@ -1,6 +1,8 @@
 package com.ayudape.developer.chatbot.api;
 
+import com.ayudape.developer.chatbot.model.Feedback;
 import com.ayudape.developer.chatbot.model.Message;
+import com.ayudape.developer.chatbot.service.FeedbackService;
 import com.ayudape.developer.chatbot.service.MessageService;
 import com.ibm.cloud.sdk.core.service.security.IamOptions;
 import com.ibm.watson.assistant.v2.Assistant;
@@ -18,14 +20,16 @@ public class MessageController {
 
     private final MessageService messageService;
     private final Assistant assistantService;
+    private final FeedbackService feedbackService;
 
     @Autowired
-    private MessageController(MessageService messageService) {
+    private MessageController(MessageService messageService, FeedbackService feedbackService) {
         IamOptions options = new IamOptions.Builder().apiKey("rS0J-FJmKIrLKk6yUoM6tBffDaCNnoCWQCG-DBOo-EvZ").build();
         this.messageService = messageService;
         this.assistantService = new Assistant("2019-06-04");
         this.assistantService.setIamCredentials(options);
         this.assistantService.setEndPoint("https://gateway.watsonplatform.net/assistant/api");
+        this.feedbackService = feedbackService;
     }
 
     @PostMapping(
@@ -50,6 +54,12 @@ public class MessageController {
                 .input(input)
                 .build();
         MessageResponse response = this.assistantService.message(messageOptions).execute().getResult();
+        String intent = response.getOutput().getIntents().get(0).getIntent();
+        if (intent.equals("Feedback"))
+        {
+            Feedback nonAnsweredQuestion = new Feedback(message.getText());
+            feedbackService.save(nonAnsweredQuestion);
+        }
         List<DialogRuntimeResponseGeneric> responseMessages = response.getOutput().getGeneric();
         for (DialogRuntimeResponseGeneric responseMessage:responseMessages)
         {
