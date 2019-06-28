@@ -13,7 +13,7 @@ class App extends React.Component {
     };
     handleSendMessage = async() => {
       if(this.state.userInput.trim().length === 0) return;
-      const newMessage = {text:this.state.userInput,sender:true,date:'9:00'};
+      const newMessage = {text:this.state.userInput,sender:true,date:'9:00',handler:()=>{}};
       let _messages = this.state.messages;
       _messages.push(newMessage);
       let chatbotMessages;
@@ -74,9 +74,9 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <Header />
-                <MessageList messages={this.state.messages}/>
-                <Sendform onUserInputChange={this.handleUserInputChange} userInput={this.state.userInput} send={this.handleSendMessage}/>
+                <Header/>
+                  <MessageList messages={this.state.messages}/>
+                  <Sendform onUserInputChange={this.handleUserInputChange} userInput={this.state.userInput} send={this.handleSendMessage}/>
             </div>
         );
     }
