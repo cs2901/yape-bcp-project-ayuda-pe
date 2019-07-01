@@ -28,7 +28,7 @@ const MessageContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 100%;
+    max-width: 80%;
     margin: 20px 10px;
     background: var(--main-color);
     color: var(--main-text-color);
@@ -43,7 +43,8 @@ const MessageContainer = styled.div`
 `;
 
 const Image = styled.img`
-    max-width:50%;
+    width:90%;
+    max-width: 330px;
 `
 
 
