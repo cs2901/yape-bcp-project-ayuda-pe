@@ -12,7 +12,7 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 
 **Reynaldo Rojas(100%):** Send messages to watson
 - v1.2: Initial backend and frontend setup. Created AWS RDS MariaDB instance.
-- v1.3: Endpoint in backend that receives requests and then connects to the Watson API to get a appropiate response.
+- v1.3: Endpoint in backend that receives requests and then connects to the Watson API to get an appropiate response.
 - v1.4: Call endpoint from React using axios.
 - v2.0: AWS EC2 setup and backend deployment. AWS Amplify frontend deployment.
 
