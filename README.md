@@ -5,6 +5,7 @@
 - Rodrigo Bedoya
 - Bryan Diaz
 - Reynaldo Rojas
+- Juan Navarro
 
 # Demo
 To run the project is necessary to execute the **run.sh** script in root.
