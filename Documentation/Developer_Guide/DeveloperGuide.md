@@ -5,30 +5,31 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 
 ## 2. Features
 
-**Reynaldo Rojas(30%), Nicolas Chipana(70%):** UI 
-- v1.2: Implement message box UI: Using CSS it is possible to change the dimensions of the message box depending on the size of the message.
-- v1.3: Scrolling message: Using React it is possible to change the current layout of an HTML to react to a certain action. In this case, sending or receiving a message from AyudaPe will scroll the screen proportionally to the size of the message.
-- v1.4: Touchable questions: Using React it is possible to call a back-end function after touching an item. In this case, after touching an option in the chat the described action will call a function that retrieves information from the database to show.
+**Reynaldo Rojas(30%), Nicolas Chipana(70%):** User Interface
+- v1.2: Create message boxes when sending and recieving messages, using CSS components it is possible to change the dimensions of the message box depending on the size of the message.
+- v1.3: Using React's ComponentDidUpdate function sending and receiving messages scroll the screen proportionally to the size of the message.
+- v1.4: Using React simulate a question request after touching a component from the functionality list.
+- v2.0: Use flex and CSS components to adapt components to different size of screens.
 
-**Reynaldo Rojas(100%):** Send messages to watson
+**Reynaldo Rojas(100%):** Send messages to Watson
 - v1.2: Initial backend and frontend setup. Created AWS RDS MariaDB instance.
 - v1.3: Endpoint in backend that receives requests and then connects to the Watson API to get an appropiate response.
 - v1.4: Call endpoint from React using axios.
 - v2.0: AWS EC2 setup and backend deployment. AWS Amplify frontend deployment.
 
-**Rodrigo Bedoya (100%):** tracking questions without answers 
-- v1.2: Save all user-chatbot interactions in database  
-- v1.3: Save all user-chatbot interactions where chatbot answered with default "unable to understand question" phrase.  
+**Rodrigo Bedoya (100%):** Tracking questions without answers
+- v1.2: Save all user-chatbot interactions in database
+- v1.3: Save all user-chatbot interactions where chatbot answered with default "unable to understand question" phrase.
 - v1.4: Save datetime of user-chatbot interaction to track most recent and most critical unanswered questions.
 
-**Reynaldo Rojas (100%):** feedback option
-- v2.0: Receive feedback from hotjar via email
+**Reynaldo Rojas (100%):** Feedback option
+- v2.0: Receive feedback from Hotjar via email
 
-**Joe Acuña (34%), Bryan Díaz (33%), Juan Navarro (33%):** process question feature 
+**Joe Acuña (34%), Bryan Díaz (33%), Juan Navarro (33%):** Process question feature
 - v1.2 Integration with Watson Assistant API.
-- v1.3 Train model to display list of functionalities. 
+- v1.3 Train model to display list of functionalities.
 - v1.4 Add websockets support.
-- v2.0 Train model to answer more question.
+- v2.0 Train model to answer more questions.
 
 ## 3. Design
 
