@@ -26,26 +26,29 @@ Non-functional:
 
 ## Features
 
-**Nicolas Chipana:** UI 
+**Reynaldo Rojas(30%), Nicolas Chipana(70%):** UI 
 - v1.2: Implement message box UI: Using CSS it is possible to change the dimensions of the message box depending on the size of the message.
 - v1.3: Scrolling message: Using React it is possible to change the current layout of an HTML to react to a certain action. In this case, sending or receiving a message from AyudaPe will scroll the screen proportionally to the size of the message.
 - v1.4: Touchable questions: Using React it is possible to call a back-end function after touching an item. In this case, after touching an option in the chat the described action will call a function that retrieves information from the database to show.
 
-**Rodrigo Bedoya:** save history feature 
+**Rodrigo Bedoya (100%):** tracking questions without answers 
 - v1.2: Save all messages in file. Load all messages from file 
 - v1.3: Save / load only recent messages. 
 - v1.4: Can choose to clear history / select after how much time history should be cleared. 
 - v2.0: Show older messages as user goes up.
 
-**Reynaldo Rojas, Juan Navarro:** process question feature 
-- v1.2 Integration with Watson Assistant API 
-- v1.3 Train model and support more questions 
-- v1.4 Add websockets support 
+**Reynaldo Rojas (100%):** feedback option
+- v1.2:
+- v1.3:
+- v1.4:
+- v2.0:
 
-**Joe Acuña, Bryan Diaz:** show functionalities feature 
-- v1.2: list options (app functionalities) 
-- v1.3: show tutorials with text and images explaining app functionalities 
-- v2.0: link options with their respective task
+**Joe Acuña (34%), Bryan Díaz (33%), Juan Navarro (33%):** process question feature 
+- v1.2 Integration with Watson Assistant API.
+- v1.3 Train model to display list of functionalities. 
+- v1.4 Add websockets support.
+- v2.0 Train model to answer more question.
+
 
 ## FAQ
 
