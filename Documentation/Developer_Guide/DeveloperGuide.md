@@ -23,7 +23,7 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 - v2.0: Show older messages as user goes up.
 
 **Reynaldo Rojas (100%):** feedback option
-- v2.0: Receive feedback from hojar via email
+- v2.0: Receive feedback from hotjar via email
 
 **Joe Acuña (34%), Bryan Díaz (33%), Juan Navarro (33%):** process question feature 
 - v1.2 Integration with Watson Assistant API.
