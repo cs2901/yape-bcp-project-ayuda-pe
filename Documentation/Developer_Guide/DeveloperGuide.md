@@ -10,16 +10,20 @@ AyudaPe is an extension/complement to the Yape application that will act as a ch
 - v1.3: Scrolling message: Using React it is possible to change the current layout of an HTML to react to a certain action. In this case, sending or receiving a message from AyudaPe will scroll the screen proportionally to the size of the message.
 - v1.4: Touchable questions: Using React it is possible to call a back-end function after touching an item. In this case, after touching an option in the chat the described action will call a function that retrieves information from the database to show.
 
+**Reynaldo Rojas(100%):** Send messages to watson
+- v1.2: Initial backend and frontend setup. Created AWS RDS MariaDB instance.
+- v1.3: Endpoint in backend that receives requests and then connects to the Watson API to get a appropiate response.
+- v1.4: Call endpoint from React using axios.
+- v2.0: AWS EC2 setup and backend deployment. AWS Amplify frontend deployment.
+
 **Rodrigo Bedoya (100%):** tracking questions without answers 
-- v1.2: Save all user-chatbot interactions in database 
-- v1.3: Save all user-chatbot interactions where chatbot answered with default "unable to understand question" phrase. 
-- v1.4: Save datetime of user-chatbot interaction to track most recent and most critical unanswered questions. 
+- v1.2: Save all messages in file. Load all messages from file 
+- v1.3: Save / load only recent messages. 
+- v1.4: Can choose to clear history / select after how much time history should be cleared. 
+- v2.0: Show older messages as user goes up.
 
 **Reynaldo Rojas (100%):** feedback option
-- v1.2:
-- v1.3:
-- v1.4:
-- v2.0:
+- v2.0: Receive feedback from hojar via email
 
 **Joe Acuña (34%), Bryan Díaz (33%), Juan Navarro (33%):** process question feature 
 - v1.2 Integration with Watson Assistant API.
