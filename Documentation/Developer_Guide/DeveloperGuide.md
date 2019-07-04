@@ -62,78 +62,83 @@ What if there is no internet connection, can I ask my doubts to AyudaPe?
 
 ## 5. Glossary
 
-**User Interface (UI)**: Medio por el cual el usuario interactúa con el dispositivo. En este caso serán los botones y entradas de texto de la aplicación.
+**User Interface (UI)**: Medium by which the user interacts with the device. In this case it will be the buttons and text entries of the application.
 
-**User Experience (UX)**: Se refiere a la calidad de la interacción desde la perspectiva del usuario.
+**User Experience (UX)**: It refers to the quality of the interaction from the user's perspective.
 
-**Lenguaje Natural**: Es cualquier lenguaje humano que ha evolucionado naturalmente con el uso.
+**Natural Language**: It is any human language that has evolved naturally with use.
 
-**Chatbot**: Programa que recibe como entrada texto que al cual nos referimos como lenguaje natural y, posteriormente, retorna una salida acorde. Cuenta con un *UI*.
+**Chatbot**: Program that receives as input text that we refer to as a natural language and, later, returns an appropriate exit. It has a *UI.
 
-**Protocolo de comunicación**: Es un sistema de reglas que permite que dos o más entidades de un sistema de comunicación puedan intercambiar información.
+**Comunication Protocol**: It is a system of rules that allows two or more entities of a communication system to exchange information.
 
-**HTTP/1.1**: Uno de los *protocolos de comunicación* más usados en Internet.
+**HTTP/1.1**: One of the most used *communication protocols on the Internet.
 
-**Application Programming Interface(API)**: Conjunto de rutinas de un programa a las cuales se puede acceder mediante protocolos de comunicación tales como **HTTP/1.1**.
+**Application Programming Interface(API)**: Set of routines of a program which can be accessed through communication protocols such as **HTTP/1.1*.
 
-**Request**: Es un pedido que se le hace a un programa, este puede ser de varios tipos. Los efectos pueden ser diversos dependiendo del tipo.
+**Request**: It is an order that is made to a program, this can be of various types. The effects can be different depending on the type.
 
-**Client**: Envía *requests* a un *server*.
+**Client**: Sends *requests to a server.
 
-**Server**: Espera requests de algún *client* y retorna *responses* acorde.
+**Server**: Expect requests from some *client and return responses according.
 
-**Response**: Simplificando bastante, se entiende como la respuesta del *server* al *client* como efecto de haber recibido un *request*.
+**Response**: To put it simple, it is understood as the response from the server to the *client as an effect of having received a request.
 
-**Watson Assistant**: Es un *API* a la que se le envía un texto en un lenguaje natural el cual es procesado por otro programa que, ha sido entrenado para reconocer patrones de frases; posteriormente, recibe el resultado del análisis, y procesa este resultado para finalmente enviar un *response* al *client*.
+**Watson Assistant**: It is an *API which a text is sent in a natural language which is processed by another program that has been trained to recognize patterns of phrases; subsequently, it receives the result of the analysis, and processes this result to finally send a response to the client.
 
-**Front-end**: La implementación de un diseño de un *UI*.
+**Front-end**: The implementation of a *UI design. 
 
-**Back-end**: La implementación de los procedimientos que se deben seguir la aplicación.
+**Back-end**: The implementation of the procedures that the application should follow.
 
-**Transmission Control Protocol (TCP)**: Es uno de los protocolos principales que componen a Internet.
+**Transmission Control Protocol (TCP)**: It is one of the main protocols that make up the Internet.
 
-**Websocket**: Es un *protocolo de comunicación* que provee una comunicación en dos direcciones al mismo tiempo mediante una conexión *TCP*.
+**Websocket**: It is a *communication protocol that provides two-way communication at the same time via a TCP connection.
 
-**Plataforma**: Es el entorno en el que se ejecuta una pieza de software.
+**Platform**: It is the environment in which a piece of software is executed.
 
-**Cloud computing service**: Provee tecnología como servicio a través de internet o una red dedicada.
+**Cloud computing service**: Provides technology as a service through the Internet or a dedicated network.
 
-**Amazon Web Services (AWS)**: Es una plataforma de *cloud computing services*.
+**Amazon Web Services (AWS)**: It is a cloud computing services platform.
 
-**Lenguaje de programación**: Lenguaje formal utilizado para implementar programas.
+**Programming language**: Formal language used to implement programs.
 
-**Javascript**: Lenguaje de programación utilizado para implementar la parte lógica del *front-end*.
+**Javascript**: Programming language used to implement the logical part of the front-end.
 
-**Status Code**: Indica si un *request* ha sido completado o no.
+**Status Code**: Indicates whether a request has been completed or not.
 
-**Controller**: Procesa el *request* y realiza acciones sobre los *models*.
+**Controller**: Process the request and perform actions on the models.
 
-**Model**: Maneja la información, lógica y reglas de la aplicación.
+**Model**: Handles the information, logic and rules of the application.
 
-**Database (DB)**: Es una colección de datos organizada.
+**Database (DB)**: It is an organized data collection.
 
-**Object Oriented Programming (OOP)**: Es un paradigma de programación que se basa en objetos. Estos objetos pueden contener información y poseer rutinas, conocidas como métodos.
+**Object Oriented Programming (OOP)**: It is a paradigm of programming that is based on objects. These objects can 
+contain information and possess routines, known as methods.
 
-**Lenguaje de programación orientado a objetos**: Lenguaje de programación que implementa *OOP*.
+**Object oriented programming language**: Programming language that implements OOP.
 
-**Object-relational Mapping (ORM)**: Es una técnica utilizada para convertir información entre sistemas usando un *lenguaje de programación orientado a objetos*.
+**Object-relational Mapping (ORM)**: It is a technique used to convert information between systems using an object-
+oriented programming language.
 
-**Java**: Es un lenguaje de programación orientado a objetos. Se utilizará para implementar el back-end de la aplicación.
+**Java**: It is an object-oriented programming language. It will be used to implement the application's back-end.
 
-**Hibernate ORM**: Es una herramienta que implementa *ORM* y puede ser utilizada con *Java*.
+**Hibernate ORM**: It is a tool that implements ORM and can be used with Java.
 
-**JSX**: Es un lenguaje de programación orientado a objetos el cual posteriormente se traduce a *Javascript*. Se utilizará en conjunto con *React* para la implementación del *front-end*.
+**JSX**: It is an object-oriented programming language which is subsequently translated into Javascript. It will be 
+used in conjunction with React for the implementation of the front-end.
 
-**Librería**: Conjunto de implementaciones utilizadas por un programa.
+**Library**: Set of implementations used by a program.
 
-**React**: Librería de *Javascript* utilizada para construir el *UI* y la lógica del *front-end*.
+**React**: Javascript library used to build the UI and the logic of the front-end.
 
-**Markup Language**: Lenguaje que usa etiquetas para definir elementos en un documento.
+**Markup Language**: Language that uses tags to define elements within a document.
 
-**Cascading Style Sheets (CSS)**: Es un lenguaje usado para describir la presentación de un documento escrito en un *markup language*.
+**Cascading Style Sheets (CSS)**: A language used to describe the presentation of a document. It is written in markup 
+language. 
 
-**Hyper Text Markup Language (HTML)**: Es un *markup language* utilizado para describir la estructura de una página web.
+**Hyper Text Markup Language(HTML)**: A markup language used to describe the structure of a web page
 
-**Framework**: Es una abstracción que provee funcionalidades genéricas las cuales pueden ser implementadas por el usuario.
+**Framework**: An abstraction that provides generic functionalities that can be implemented by the user
 
-**Spring Boot**: Programa que facilita la implementación de una aplicación basada en la plataforma Spring.
+**Spring Boot**: Program that facilitates the implementation of a Spring based application.
+
