@@ -32,10 +32,9 @@ Non-functional:
 - v1.4: Touchable questions: Using React it is possible to call a back-end function after touching an item. In this case, after touching an option in the chat the described action will call a function that retrieves information from the database to show.
 
 **Rodrigo Bedoya (100%):** tracking questions without answers 
-- v1.2: Save all messages in file. Load all messages from file 
-- v1.3: Save / load only recent messages. 
-- v1.4: Can choose to clear history / select after how much time history should be cleared. 
-- v2.0: Show older messages as user goes up.
+- v1.2: Save all user-chatbot interactions in database  
+- v1.3: Save all user-chatbot interactions where chatbot answered with default "unable to understand question" phrase.  
+- v1.4: Save datetime of user-chatbot interaction to track most recent and most critical unanswered questions.
 
 **Reynaldo Rojas (100%):** feedback option
 - v1.2:
